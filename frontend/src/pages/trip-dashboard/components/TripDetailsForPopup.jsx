@@ -50,8 +50,6 @@ const ModalWrapper = ({ isOpen, onClose, children, size = "max-w-4xl" }) => {
   );
 };
 
-/* -------------------- Unsplash helper (mock images) -------------------- */
-const getRandomUnsplash = (q = "goa", w = 800, h = 450) => `https://source.unsplash.com/${w}x${h}/?${encodeURIComponent(q)}&sig=${Math.floor(Math.random() * 1000)}`;
 
 /* -------------------- GOA Data -------------------- */
 /* Hotels (mocked). Each hotel has a hotelPrice used for sorting. */
@@ -62,7 +60,7 @@ const MOCKED_API_RESPONSE = [
     hotelCity: "Goa",
     hotelAddress: "Sinquerim, North Goa",
     hotelPrice: 12000,
-    image: getRandomUnsplash("taj fort aguada resort goa"),
+    image: "/h1.jpg",
     rooms: [
       { roomId: "r11", roomName: "AC Deluxe Room – Near Calangute Beach", type: "AC", price: 12000, availableRooms: 3, image: getRandomUnsplash("ac deluxe room") },
       { roomId: "r12", roomName: "AC Luxury Suite – Sea Facing", type: "AC", price: 20000, availableRooms: 2, image: getRandomUnsplash("suite sea view") },
@@ -79,7 +77,7 @@ const MOCKED_API_RESPONSE = [
     hotelCity: "Goa",
     hotelAddress: "Bambolim Beach",
     hotelPrice: 10000,
-    image: getRandomUnsplash("grand hyatt goa"),
+    image: "/h2.jpg",
     rooms: [
       { roomId: "r21", roomName: "AC Premium Room – Pool View", type: "AC", price: 10000, availableRooms: 4, image: getRandomUnsplash("pool view room") },
       { roomId: "r22", roomName: "AC Club Suite", type: "AC", price: 18000, availableRooms: 1, image: getRandomUnsplash("club suite") },
@@ -96,7 +94,7 @@ const MOCKED_API_RESPONSE = [
     hotelCity: "Goa",
     hotelAddress: "Utorda Beach, South Goa",
     hotelPrice: 9000,
-    image: getRandomUnsplash("planet hollywood goa"),
+    image: "/h3.jpg",
     rooms: [
       { roomId: "r31", roomName: "AC Studio Room – Panaji City", type: "AC", price: 9000, availableRooms: 5, image: getRandomUnsplash("studio room") },
       { roomId: "r32", roomName: "Non-AC Beach Side Shack Room", type: "Non-AC", price: 3000, availableRooms: 6, image: getRandomUnsplash("beach shack") },
@@ -112,7 +110,7 @@ const MOCKED_API_RESPONSE = [
     hotelCity: "Goa",
     hotelAddress: "Vagator Beach",
     hotelPrice: 15000,
-    image: getRandomUnsplash("w goa vagator"),
+    image: "/h4.jpg",
     rooms: [
       { roomId: "r41", roomName: "AC Luxury Suite – Sea Facing", type: "AC", price: 25000, availableRooms: 1, image: getRandomUnsplash("w goa suite") },
       { roomId: "r42", roomName: "AC Wonderful Room – Hill View", type: "AC", price: 15000, availableRooms: 4, image: getRandomUnsplash("w goa room") },
@@ -128,7 +126,7 @@ const MOCKED_API_RESPONSE = [
     hotelCity: "Goa",
     hotelAddress: "Calangute Road",
     hotelPrice: 8500,
-    image: getRandomUnsplash("le meridien goa"),
+    image: "/h5.jpg",
     rooms: [
       { roomId: "r51", roomName: "AC Classic Room", type: "AC", price: 8500, availableRooms: 6, image: getRandomUnsplash("le meridien room") },
       { roomId: "r52", roomName: "AC Family Suite – 4 Beds", type: "AC", price: 13000, availableRooms: 2, image: getRandomUnsplash("family suite") },
@@ -144,7 +142,7 @@ const MOCKED_API_RESPONSE = [
     hotelCity: "Goa",
     hotelAddress: "Candolim",
     hotelPrice: 7500,
-    image: getRandomUnsplash("novotel goa"),
+    image: "/h6.jpg",
     rooms: [
       { roomId: "r61", roomName: "AC Premium Room – Pool View", type: "AC", price: 7500, availableRooms: 5, image: getRandomUnsplash("pool view room novotel") },
       { roomId: "r62", roomName: "AC Super Deluxe – Candolim Area", type: "AC", price: 9500, availableRooms: 3, image: getRandomUnsplash("deluxe room novotel") },
@@ -160,7 +158,7 @@ const MOCKED_API_RESPONSE = [
     hotelCity: "Goa",
     hotelAddress: "Varca Beach, South Goa",
     hotelPrice: 11000,
-    image: getRandomUnsplash("zuri white sands goa"),
+    image: "/h7.jpg",
     rooms: [
       { roomId: "r71", roomName: "AC Garden View Room", type: "AC", price: 11000, availableRooms: 4, image: getRandomUnsplash("garden view room zuri") },
       { roomId: "r72", roomName: "AC Pool View Suite", type: "AC", price: 16000, availableRooms: 2, image: getRandomUnsplash("pool view suite zuri") },
@@ -176,7 +174,7 @@ const MOCKED_API_RESPONSE = [
     hotelCity: "Goa",
     hotelAddress: "Calangute-Arpora Road",
     hotelPrice: 6500,
-    image: getRandomUnsplash("hard rock hotel goa"),
+    image: "/h8.jpg",
     rooms: [
       { roomId: "r81", roomName: "AC Deluxe Room", type: "AC", price: 6500, availableRooms: 7, image: getRandomUnsplash("hard rock room") },
       { roomId: "r82", roomName: "Non-AC Basic Room – Baga", type: "Non-AC", price: 2800, availableRooms: 5, image: getRandomUnsplash("basic room baga") },
@@ -191,7 +189,7 @@ const MOCKED_API_RESPONSE = [
     hotelCity: "Goa",
     hotelAddress: "Near Anjuna Flea Market",
     hotelPrice: 5500,
-    image: getRandomUnsplash("fairfield marriott anjuna"),
+    image: "/h10.jpg",
     rooms: [
       { roomId: "r91", roomName: "AC Studio Room", type: "AC", price: 5500, availableRooms: 8, image: getRandomUnsplash("studio room anjuna") },
       { roomId: "r92", roomName: "AC Modern Room – Baga Road", type: "AC", price: 6200, availableRooms: 6, image: getRandomUnsplash("modern room anjuna") },
@@ -206,7 +204,7 @@ const MOCKED_API_RESPONSE = [
     hotelCity: "Goa",
     hotelAddress: "Cavelossim Beach, South Goa",
     hotelPrice: 22000,
-    image: getRandomUnsplash("st regis goa"),
+    image: "/h11.jpg",
     rooms: [
       { roomId: "r101", roomName: "AC Premium Villa Room – North Goa", type: "AC", price: 22000, availableRooms: 3, image: getRandomUnsplash("st regis villa") },
       { roomId: "r102", roomName: "AC Luxury Suite – Sea Facing", type: "AC", price: 35000, availableRooms: 1, image: getRandomUnsplash("st regis suite sea") },
@@ -609,9 +607,7 @@ export default function App() {
               initial={{ scale: 1.1, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              src={getRandomUnsplash("goa beaches banner, tropical", 1200, 700)}
-              alt="Goa"
-              className="w-full h-64 object-cover rounded-xl mb-4 shadow-lg"
+              src="/h12.jpg" alt="Goa" className="w-full h-64 object-cover rounded-xl mb-4 shadow-lg"
             />
             <p className="text-sm text-gray-600 p-4 bg-gray-50 rounded-lg border">
                 **Goa is waiting!** Explore a variety of stays from North to South Goa, select your preferred AC/Non-AC room, customize your meal plan (breakfast, lunch, dinner, or package), and finish by booking a reliable local cab (Bike, Car, or Traveller) directly to your hotel or airport.
