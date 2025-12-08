@@ -209,7 +209,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-1">
                 <Icon name="MapPin" size={14} />
-                <span>Made with ❤️ in San Francisco</span>
+                <span>Made with ❤️ in Indore</span>
               </div>
             </div>
           </div>
