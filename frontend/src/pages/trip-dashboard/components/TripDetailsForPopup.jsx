@@ -49,6 +49,8 @@ const ModalWrapper = ({ isOpen, onClose, children, size = "max-w-4xl" }) => {
     </div>
   );
 };
+const getRandomUnsplash = (q = "goa", w = 800, h = 450) =>
+  `https://source.unsplash.com/${w}x${h}/?${encodeURIComponent(q)}&t=${Date.now()}`;
 
 
 /* -------------------- GOA Data -------------------- */
@@ -62,8 +64,8 @@ const MOCKED_API_RESPONSE = [
     hotelPrice: 12000,
     image: "/h1.jpg",
     rooms: [
-      { roomId: "r11", roomName: "AC Deluxe Room – Near Calangute Beach", type: "AC", price: 12000, availableRooms: 3, image: getRandomUnsplash("ac deluxe room") },
-      { roomId: "r12", roomName: "AC Luxury Suite – Sea Facing", type: "AC", price: 20000, availableRooms: 2, image: getRandomUnsplash("suite sea view") },
+      { roomId: "r11", roomName: "AC Deluxe Room – Near Calangute Beach", type: "AC", price: 12000, availableRooms: 3, image:"/Room1.jpg" },
+      { roomId: "r12", roomName: "AC Luxury Suite – Sea Facing", type: "AC", price: 20000, availableRooms: 2, image: "/Room2.jpg" },
       { roomId: "r13", roomName: "Non-AC Standard Room – Budget", type: "Non-AC", price: 4500, availableRooms: 4, image: getRandomUnsplash("budget non ac room") },
     ],
     meals: [
